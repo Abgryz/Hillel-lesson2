@@ -1,6 +1,6 @@
 package ua.ithillet.lesson2.part3;
 
-public class Triangle implements Figure{
+public class Triangle implements FigureInterface {
     private double a;
     private double b;
     private double c;

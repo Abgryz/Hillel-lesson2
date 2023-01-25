@@ -3,12 +3,20 @@ package ua.ithillet.lesson2;
 import ua.ithillet.lesson2.part2.Cat;
 import ua.ithillet.lesson2.part2.Dog;
 import ua.ithillet.lesson2.part3.Circle;
+import ua.ithillet.lesson2.part3.FigureInterface;
 import ua.ithillet.lesson2.part3.Square;
 import ua.ithillet.lesson2.part3.Triangle;
 
 import java.util.Scanner;
 
 public class Main {
+    public static double areasCalculation(FigureInterface[] figures){
+        double areas = 0;
+        for(int i = 0; i < figures.length; i++){
+            areas += figures[i].area();
+        }
+        return areas;
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -39,5 +47,8 @@ public class Main {
         System.out.println("Введіть сторони трикутника: ");
         Triangle triangle = new Triangle(scan.nextDouble(), scan.nextDouble(), scan.nextDouble());
         System.out.println("Площа трикутника: " + triangle.area());
+
+        FigureInterface[] figures = new FigureInterface[] {circle, square, triangle};
+        System.out.println("Площа усіх фігур: " + areasCalculation(figures));
     }
 }

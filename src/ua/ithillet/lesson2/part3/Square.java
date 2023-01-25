@@ -1,6 +1,6 @@
 package ua.ithillet.lesson2.part3;
 
-public class Square implements Figure{
+public class Square implements FigureInterface {
     private double a;
 
     public Square(double a){

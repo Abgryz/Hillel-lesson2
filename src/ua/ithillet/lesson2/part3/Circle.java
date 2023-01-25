@@ -1,6 +1,6 @@
 package ua.ithillet.lesson2.part3;
 
-public class Circle implements Figure{
+public class Circle implements FigureInterface {
     private double radius;
 
     public Circle(double radius) {
